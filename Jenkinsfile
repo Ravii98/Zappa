@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh '''
                 mkdir -p package
-                pip install -r requirements.txt --target ./package
+                python3 -m pip install -r requirements.txt --target ./package
                 cp -r zappa ./package/
                 cd package
                 zip -r ../$ZIP_FILE .
